@@ -16,7 +16,7 @@ function Video() {
 let player;
 function onYouTubeIframeAPIReady() {
     console.log('API ready!');
-    let epNum = get.rndEpisodeNum; 
+   
     player = new YT.Player("player", {
         height: '480',
         width: '720',
@@ -27,7 +27,7 @@ function onYouTubeIframeAPIReady() {
             modestbranding: 1,
             listType: 'playlist',
             list: Channels[get.num].list[get.pageData[0]],
-            index: epNum + 1, //this always subtracts one
+            index: get.rndEpisodeNum + 1, //this always subtracts one
             // loop: 1, //llops the playlist
             autoplay: true,
             mute: 0,
@@ -54,9 +54,9 @@ function onYouTubeIframeAPIReady() {
         Element.vidWindow().style.display = "block";
         //////////hide static and pause//////////////////
         document.getElementById("staticImage").style.display = "none";
-        event.target.playVideo(); Element.sound().pause();
+        Element.sound().pause();
 
-        console.log("RndNumber: ", get.rndEpisodeNum, "realEpNumber: ", get.epNum);
+      
         console.log("Ep running: ", player.getPlaylistIndex());
         ///check if all videos played
         if (get.pageData.length - 1 >= Channels[get.num].episodes) {
@@ -66,7 +66,7 @@ function onYouTubeIframeAPIReady() {
         if (player.getPlaylistIndex() < 0) {
             //if video is an error, push the index number represented my rndEpisodeNum-1
             //this only works with a newly random generated item
-            get.pageData.push(get.epNum);
+            get.pageData.push(get.rndEpisodeNum);
             ///and save the array to local storage (each channel gets its own local storage slot)
             localStorage.setItem(get.num, JSON.stringify(get.pageData));
             if (!(get.pageData.length > Channels[get.num].episodes)) {
@@ -90,7 +90,7 @@ function onYouTubeIframeAPIReady() {
 
 
         let k = setTimeout(function () {
-            get.epNum = player.getPlaylistIndex();
+            get.rndEpisodeNum = player.getPlaylistIndex();
             // event.target.setShuffle({ 'shufflePlaylist': true });
 
             /*This calculates the video length and finds how many times the value is divisible by 10 mins (600s)*/
@@ -114,7 +114,7 @@ function stateChange() {
         console.log(Channels[get.num].episodes);
       
         console.log("original Rnd Ch: ", get.rndEpisodeNum);
-        console.log("Last Ep: ", player.getPlaylistIndex() - 1, get.epNum);
+        console.log("Last Ep: ", player.getPlaylistIndex() - 1, get.rndEpisodeNum);
         console.log("New Ep: ", player.getPlaylistIndex());
 
 
@@ -129,10 +129,10 @@ function stateChange() {
             localStorage.setItem(get.num, JSON.stringify(get.pageData));
             Input.refresh();
         }
-        ///epNum keeps track of episode updates
-        if (get.epNum < player.getPlaylistIndex()) {
+        ///get.rndEpisodeNum keeps track of episode updates
+        if (get.rndEpisodeNum< player.getPlaylistIndex()) {
 
-            get.epNum = player.getPlaylistIndex();
+            get.rndEpisodeNum = player.getPlaylistIndex();
             //waits for 2secs before saving prev video to let player have time to switch states
             let j = setTimeout(function () {
                 //add last episode to watched list array (pageData)
