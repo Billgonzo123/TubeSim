@@ -43,7 +43,7 @@ function onYouTubeIframeAPIReady() {
     });
 }
    function  videoStart(event) {
-        console.log('VIDEO START??');
+        console.log('VIDEO START');
         //event.target.playVideo();
         //Element.vidWindow() = document.querySelector('#player');
         get.overscanSize = parseFloat(localStorage.getItem('overscan'));
@@ -123,7 +123,7 @@ function stateChange() {
         //  if (player.getPlaylistIndex() === channel[num].episodes){ lastInPlaylist = 1; console.log('This is the lastepisode in playlist');}
         if (player.getPlayerState() == 0) {
             console.log("Playlist ended");
-            pageData.push(player.getPlaylistIndex());
+            get.pageData.push(player.getPlaylistIndex());
 
             ///and save the array to local storage (each channel gets its own local storage slot)
             localStorage.setItem(get.num, JSON.stringify(get.pageData));
