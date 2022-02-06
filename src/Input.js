@@ -1,6 +1,6 @@
-import Channels from './data/channels.js';
-import Element from './elements.js';
-import get from './variables.js';
+import Channels from './data/Channels.js';
+import Element from './Elements.js';
+import get from './Variables.js';
 
 
 
