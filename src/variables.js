@@ -16,4 +16,3 @@ let get = {
      num: localStorage.getItem('lastChannel')
 }
 
-export default get;

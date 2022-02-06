@@ -1,19 +1,18 @@
 
 const Element = {
-     static: document.getElementById("staticImage"),
-     listDisplayDiv: document.getElementById("chListDisp"),
-     listDisplay: document.getElementById('chList'),
-     listDisplay2: document.getElementById('chList2'),
-     controlDisplay: document.getElementById("controlsScreen"),
-     soundSrc: document.getElementById('soundSrc'),
-     sound: document.getElementById('audioPlayer'),
-     channelEntry: document.getElementById('chEntry'),
-    volEl: document.getElementById('volume'),
-     chNameDisplay: document.getElementById('channelNameDisplay'),
-     vidWindow: document.querySelector('#player')
+     static() {return document.getElementById("staticImage")},
+     listDisplayDiv() {return document.getElementById("chListDisp")},
+     listDisplay() {return document.getElementById('chList')},
+     listDisplay2() {return document.getElementById('chList2')},
+     controlDisplay() {return document.getElementById("controlsScreen")},
+     soundSrc() {return document.getElementById('soundSrc')},
+     sound() {return document.getElementById('audioPlayer')},
+     channelEntry() {return document.getElementById('chEntry')},
+     volEl() {return document.getElementById('volume')},
+     chNameDisplay() {return document.getElementById('channelNameDisplay')},
+     vidWindow() {return document.querySelector('#player')}
     
 }
 
 
 
-export default  Element;
