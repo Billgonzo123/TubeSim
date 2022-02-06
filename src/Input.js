@@ -220,7 +220,7 @@ let Input = {
         }
         Element.volEl.textContent += "]";
 
-        Element.soundSrc.volume = (get.vol/ 100);
+        Element.sound.volume = (get.vol/ 100);
 
 
         localStorage.setItem('playerVolume', get.vol);
@@ -244,7 +244,7 @@ let Input = {
         }
         Element.volEl.textContent += "]";
 
-        Element.soundSrc.volume = (get.vol / 100);
+        Element.sound.volume = (get.vol / 100);
 
 
         localStorage.setItem('playerVolume', get.vol);

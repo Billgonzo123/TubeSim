@@ -36,9 +36,9 @@ console.log('Channels List: ', Channels)
 console.log('Last channel watched before shutdown: ', get.num)
 console.log("Rand Ep: ", get.rndEpisodeNum)
 console.log('Volume set to: ',get.vol)
-Element.soundSrc.volume = (get.vol / 100);
+Element.sound.volume = (get.vol / 100);
 
 //event listener for keypress
-let element = document.addEventListener('keydown', Input.keypress)
+document.addEventListener('keydown', Input.keypress)
 
 
