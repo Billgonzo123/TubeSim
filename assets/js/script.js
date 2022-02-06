@@ -1,8 +1,6 @@
 
 //initLocal storage must be run first as some modules depend on localstorage values
 run.initiateLocalStorage();
-console.log()
-
 //populated the channel list elements with the channel names by number
 run.populateChannelList();
 //initiate elements displays to none or block
