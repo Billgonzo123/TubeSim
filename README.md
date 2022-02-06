@@ -1,7 +1,5 @@
 # CRT Flash Back Machine
 ## Description:  
-## NOTE: 
-### There may be issues with your localStorage due to a required fix. See bottom of READEME for fix
 
 Ever wish you could go back in time to the "good-old-days" of tube TV's, predetermined television programming and unskippable commercials? CRT Flash Back Machine is designed to fill this empty void, and hit you with a healthy dose of nostalgia! View hundreds of vintage programming from the past century on your favorite old CRT television! Sit back and let the good times roll!
 
@@ -48,8 +46,6 @@ Furthermore, and most importantly, you MUST configure your browser to allow auto
 |CH+/Ch-| Increase/Decrease Overscan|
 |Direction Keys| Horizontal/Vertical Shift|
 
-Note: Memory contains all previously watched episodes which are excluded when genrating random episodes.  
-### ***Due to recent bug fixes and added features you may need to clear your memory (see System Control above)
-### *** To keep your memory intact you will need to edit localStorage through Inspector and change the first value of every numbered key to a zero. 
+
 
 ## [link](https://chriskurz098.github.io/80sGameshowPlayer/)
