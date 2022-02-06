@@ -1,0 +1,132 @@
+html{
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+#player{
+    
+    z-index: 0;
+}
+
+#staticImage{
+    width:100vw;
+    height:100vh;
+    z-index: 9990;
+}
+#channelNameDisplay{
+ color:rgba(0, 182, 0,.9);
+ background-color: rgba(37, 37, 37, 0.7);
+ padding: 3px 5px 3px 5px;
+ font-family: OCR A Std, monospace;
+ position: fixed;
+ top:30px;
+ left:80px;
+ animation: glitch 33ms ease infinite,pulse ease 200ms  infinite;
+ z-index: 9999;
+}
+
+#volume{
+    color:rgba(0, 182, 0,.9);
+    background-color: rgba(100, 98, 98, 0.7);
+    padding: 3px 5px 3px 5px;
+    font-family: OCR A Std, monospace;
+    position: fixed;
+    top:350px;
+    left:130px;
+    animation: glitch 33ms ease infinite,pulse ease 200ms  infinite;
+    z-index: 9999;
+   }
+
+#chList{
+    font-size: 18px;
+    list-style-type:none;
+    border: 2px solid rgba(34, 33, 33, 0.7);
+    color:rgba(0, 182, 0,.9);
+    background-color: rgb(32, 32, 32);
+    padding: 3px 5px 3px 5px;
+    font-family: OCR A Std, monospace;
+    position: fixed;
+    top:69px;
+    left:50px;
+    z-index: 9997;
+    /*animation: glitch 33ms ease infinite,pulse ease 200ms  infinite;*/
+   }
+   
+#chList2{
+    font-size: 18px;
+    list-style-type:none;
+    border: 2px solid rgba(34, 33, 33, 0.7);
+    color:rgba(0, 182, 0,.9);
+    background-color: rgb(32, 32, 32);
+    padding: 3px 5px 3px 5px;
+    font-family: OCR A Std, monospace;
+    position: fixed;
+    top:69px;
+    left:340px;
+    z-index: 9998;
+    /*animation: glitch 33ms ease infinite,pulse ease 200ms  infinite;*/
+   }
+
+   #chEntry{
+    color:rgba(0, 182, 0,.9);
+    background-color: rgba(100, 98, 98, 0.7);
+    padding: 3px 5px 3px 5px;
+    font-family: OCR A Std, monospace;
+    position: fixed;
+    top:30px;
+    left:80px;
+    animation: glitch 33ms ease infinite,pulse ease 200ms  infinite;
+    z-index: 999999;
+   }
+
+   #menuShortcut{
+       display: block;
+       font-size: 22px;
+    color:rgba(0, 182, 0,.9);
+    background-color: rgb(51, 49, 49);
+    padding: 3px 5px 3px 5px;
+    font-family: OCR A Std, monospace;
+    position: fixed;
+    top:400px;
+    left:190px;
+    z-index: 999999;
+   }
+   #controlsScreen{
+white-space: pre;
+ color:rgba(0, 182, 0,.9);
+ background-color: rgb(37, 36, 36);
+ padding: 3px 5px 3px 5px;
+ font-family: OCR A Std, monospace;
+ font-size: 18px;
+ position: fixed;
+ top:90px;
+ left:170px;
+
+ z-index: 9999999;
+}
+@keyframes glitch {
+    from{
+       
+        filter: blur(1px);
+      
+    }
+    to {
+     
+        filter: blur(0px);
+     
+    
+    }
+    
+}
+
+@keyframes powerOff {
+    
+       0% { transform: scale(1, 1);}
+       10% { transform: scale(.9, .005);}
+       50% { transform: scale(.01, .005);}
+       100% { transform: scale(0, 0);}
+       
+
+}
+

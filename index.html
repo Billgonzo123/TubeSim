@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>CRT Flash Back Machine 2.0</title>
+
+</head>
+
+<body style="background-color:black; ">
+
+    <audio id="audioPlayer" autoplay>
+        <source id="soundSrc" src="staticSound.ogg" type="audio/ogg">
+
+
+    </audio>
+    <img id="staticImage" src="static.gif" alt="tv Static" width="720" height="480" />
+    <h2 id="channelNameDisplay">Error - Check console log</h2>
+   
+    <div id="chListDisp">
+        <ol id="chList"> </ol>
+        <ol id="chList2"> </ol>
+        <p id = "controlsScreen">
+|      Key     |       Action       |
+| ------------ | ------------------ |
+|  + PgUp      |   Channel Up       |
+|  - PgDwn     |  Channel Down      |
+| Number 0-9   |  Enter a channel   |
+|      *       |       Vol+         |
+|      /       |       Vol-         |
+|     . ,      |    Channel List    |
+|   F5/Insert  |    Reload Page     |
+|     Home     |  Pseudo power down |
+|     End      |Skip episode forever|
+        </p>
+    </div>
+    <h2 id="chEntry"></h2>
+    <h2 id="volume">Volume []</h2>
+    <div id="player"></div>
+    
+    
+    <!--<script type='module' src="./src/index.js"></script>-->
+    <script type='module' src="./script.js"></script>
+
+
+
+    
+
+</body>
+
+</html>
