@@ -7,21 +7,19 @@ Ever wish you could go back in time to the "good-old-days" of tube TV's, predete
 
 This program is specifically designed for the use of a standard definition tube TV set.  It is recommened to run this program on a device such as the Raspberry Pi, but the minimum requirements are:
 
-- Device capable of playing videos in a web browser.
-- ~~device capable of 480i/p video-out and a compatible screen~~
-- New vertical, horizontal shift and overscan allow for adjustments for larger resolutions
+- Device capable of streaming videos in a web browser.
+- Modern web browser with HTML5 support
 
 Furthermore, and most importantly, you MUST configure your browser to allow autoPlay. Due to the nature of this program, there is no user input to initiate the video player. The ultimate expiriance is had with a dedicated device that automattically boots into a web borwser with this program as its home page,which is why a linux based hobby computer is the best choice.
 
 ## features
 
 - Generates random video from slected playlist (channel)
-- Saves epsiodes that the user has watched for at least 10min so they dont repeat
+- Saves epsiodes that the user has watched for at least so they dont repeat
 - Can be controlled entirely by number keypad, allowing for use of wireless keypad as a simple remote
 - Refreshing the page generates a new episode
-- -NEW- Added new buttons [see README]
-- -NEW- Can now skip episode and remove it from random selection
-- -NEW- Added controls overscan and horizintal/vertical shift
+- -Skip episode and remove it from random selection
+- -Overscan and horizintal/vertical shift control
 
 ## Controls
 | Key  |Action   |
@@ -31,7 +29,7 @@ Furthermore, and most importantly, you MUST configure your browser to allow auto
 | Number 0-9  |  Enter a channel  |
 |  *  |Vol+|
 |  / |Vol-|
-|  . , | Display/Hide list of channels  |
+|  . , | Display/Hide channels list |
 |  F5/Insert | Reload Page for new random show  |
 |Home| Pseudo power down|
 |End| Skip episode forever|
@@ -39,7 +37,7 @@ Furthermore, and most importantly, you MUST configure your browser to allow auto
 
 
 ## System Controls
-|While channel list is open| |
+|While channels list is open| |
 |---------------|---------------|
 |Input 99| Clears the Memory of the Current Channel|
 |Input 98| Clears all Channel Memory|  
