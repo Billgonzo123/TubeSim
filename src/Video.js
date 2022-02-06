@@ -108,14 +108,14 @@ function onYouTubeIframeAPIReady() {
             player.seekTo(get.beginPlace, true);
             clearTimeout(k);
 
-        }, 1000);
+        }, 2000);
     };
 function stateChange() {
         console.log(Channels[get.num].episodes);
+      
         console.log("original Rnd Ch: ", get.rndEpisodeNum);
         console.log("Last Ep: ", player.getPlaylistIndex() - 1, get.epNum);
         console.log("New Ep: ", player.getPlaylistIndex());
-
 
 
 

@@ -6,7 +6,7 @@ let Input = {
     keypress(event) {
         let name = event.key;
         let code = event.code;
-        console.log('Key Press:',  name);
+        console.log('Key Press:', name);
 
         /*
         +   = Ch+
@@ -145,7 +145,7 @@ let Input = {
         if (get.on) {
             get.on = 0;
             get.vol = 0;
-            document.getElementById("soundSrc").src = "TVoff.ogg";
+            document.getElementById("soundSrc").src = "./assets/sound/TVoff.ogg";
             Element.sound().load();
             Element.sound().play();
 
@@ -207,7 +207,7 @@ let Input = {
     volumeUp() {
         clearTimeout(Input.volTimeOut);
         Element.volEl().style.display = 'block';
-        (get.vol>= 100) ? get.vol= 100 : get.vol+= 5;
+        (get.vol >= 100) ? get.vol = 100 : get.vol += 5;
         Element.volEl().textContent = "Volume [";
         for (let i = 0; i < (get.vol); i += 5) {
             switch (i) {
@@ -217,13 +217,9 @@ let Input = {
                     break;
             }
         }
-        Element().volEl.textContent += "]";
-
-        Element().sound.volume = (get.vol/ 100);
-
-
+        Element.volEl().textContent += "]";
+        Element.sound().volume = (get.vol / 100);
         localStorage.setItem('playerVolume', get.vol);
-        
         hideVol();
         return;
     },
@@ -247,7 +243,7 @@ let Input = {
 
 
         localStorage.setItem('playerVolume', get.vol);
-        
+
         hideVol();
         return;
     },
