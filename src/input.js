@@ -53,7 +53,7 @@ let Input = {
                     if (Element.listDisplayDiv().style.display == "block") { Input.overscan(name); }
                     break;
                 case "End":
-                    pageData.push(get.rndEpisodenum);
+                    get.pageData.push(get.rndEpisodenum);
                     ///and save the array to local storage (each channel gets its own local storage slot)
                     localStorage.setItem(get.num, JSON.stringify(get.pageData));
                     Input.refresh();
