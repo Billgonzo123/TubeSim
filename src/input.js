@@ -53,7 +53,8 @@ let Input = {
                     if (Element.listDisplayDiv().style.display == "block") { Input.overscan(name); }
                     break;
                 case "End":
-                    get.pageData.push(get.rndEpisodenum);
+                    
+                    get.pageData.push(get.rndEpisodeNum);
                     ///and save the array to local storage (each channel gets its own local storage slot)
                     localStorage.setItem(get.num, JSON.stringify(get.pageData));
                     Input.refresh();
@@ -64,10 +65,6 @@ let Input = {
                 case "Insert":
                     Input.refresh();
                     break;
-
-
-
-
             }
 
         }
@@ -80,7 +77,6 @@ let Input = {
             Element.channelEntry().textContent += name;
             name = '';
             get.n++;
-
 
             //if two numbers have been input
             if (get.n >= 2) {
@@ -167,7 +163,7 @@ let Input = {
             Input.refresh();
         }
     },
-    //---------------------------------OverscanSet-----------------------------------------------//
+    //---------------------------------OverscanSet-----------------------------------//
     overscan(key) {
 
         switch (key) {
@@ -263,7 +259,7 @@ let volTimeOut = setTimeout(function () {
     Element.volEl().style.display = 'none';
     clearTimeout(volTimeOut);
     return;
-}, 1500);
+}, 1);
 
 //resets volume display timout
 function hideVol() {
