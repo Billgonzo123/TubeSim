@@ -1,0 +1,20 @@
+{
+  "name": "crt-flashback-machine",
+  "version": "1.0.0",
+  "description": "Ever wish you could go back in time to the \"good-old-days\" of tube TV's, predetermined television programming and unskippable commercials? CRT Flash Back Machine is designed to fill this empty void, and hit you with a healthy dose of nostalgia! View hundreds of vintage programming from the past century on your favorite old CRT television! Sit back and let the good times roll!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisKurz098/CRT-Flashback-Machine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisKurz098/CRT-Flashback-Machine/issues"
+  },
+  "homepage": "https://github.com/ChrisKurz098/CRT-Flashback-Machine"
+}
