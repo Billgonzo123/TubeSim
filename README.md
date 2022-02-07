@@ -46,4 +46,4 @@ Furthermore, and most importantly, you MUST configure your browser to allow auto
 
 
 
-## [link](https://chriskurz098.github.io/CRT-Flashback-Machine/)
+## [link](https://chriskurz098.github.io/CRT_Flashback_Machine/)
