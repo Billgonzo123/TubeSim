@@ -19,9 +19,6 @@ const run = {
         if (!localStorage.getItem('overscan')) { localStorage.setItem('overscan', 1); };
         if (!localStorage.getItem('horizontalShift')) { localStorage.setItem('horizontalShift', 0); };
         if (!localStorage.getItem('verticalShift')) { localStorage.setItem('verticalShift', 0); };
-       
-        
-
     },
     populateChannelList() {
         for (let i = 0; i < 15; i++) {
@@ -35,11 +32,11 @@ const run = {
             Element.listDisplay2().append(li);
         }
         const menuShortcutEl = document.createElement("p");
-menuShortcutEl.id = "menuShortcut";
-menuShortcutEl.textContent = "Enter 00 for controls";
-Element.listDisplayDiv().append(menuShortcutEl);
+        menuShortcutEl.id = "menuShortcut";
+        menuShortcutEl.textContent = "Enter 00 for controls";
+        Element.listDisplayDiv().append(menuShortcutEl);
     },
-    checkRandomChannel() {
+    async checkRandomChannel() {
         //-----------CHECK IF RANDOM CHANNEL HAS BEEN GENERATED------------//
 
         /*This checks if the random channel has been generated before, and if it has it finds a new number.
@@ -61,6 +58,7 @@ Element.listDisplayDiv().append(menuShortcutEl);
                 i = 1;
             }
         }
+        return;
     },
     nextPlaylist() {
         //this runs if there are no more randum numbers to choose from
@@ -79,9 +77,9 @@ Element.listDisplayDiv().append(menuShortcutEl);
             console.log("PLAYLIST END. RUNNING NEXT PLAYLIST FUNCTION");
             Input.refresh();
         }
-    
-    
-    
+
+
+
     }
 };
 

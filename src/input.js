@@ -55,7 +55,7 @@ let Input = {
                 case "End":
                     pageData.push(get.rndEpisodenum);
                     ///and save the array to local storage (each channel gets its own local storage slot)
-                    localStorage.setItem(get.num, JSON.stringify(pageData));
+                    localStorage.setItem(get.num, JSON.stringify(get.pageData));
                     Input.refresh();
                     break;
                 case "Home":

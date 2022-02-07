@@ -8,8 +8,8 @@ run.initElementDisplays();
 
 
 //---------------main app init--------------//
-function app() {
-    
+async function app() {
+
     //set channel name to current channel
     Element.chNameDisplay().textContent = Channels[get.num].name;
     //set static volume based on volume value
@@ -26,7 +26,7 @@ function app() {
 
     //generate a random episode based off of Channel[num].episodes
     get.rndEpisodeNum = Math.floor((Math.random() * Channels[get.num].episodes));
-    run.checkRandomChannel();
+    await run.checkRandomChannel().then(() => console.log('new video number selected'));
 
     //if the current channel numbner isnt saved in local storage, add it
     if (!localStorage.getItem(get.num)) { localStorage.setItem(get.num, JSON.stringify([0])); };
@@ -37,6 +37,10 @@ function app() {
     console.log('Last channel watched before shutdown: ', get.num)
     console.log("Rand Ep: ", get.rndEpisodeNum)
     console.log('Volume set to: ', get.vol)
+
+    //play video
+    console.log('Now attempting to run video player')
+    Video();
 
 }
 
@@ -49,10 +53,9 @@ document.addEventListener('keydown', Input.keypress)
 
 app();
 
-////////////Video Player
-console.log('Now attempting to run video player')
 
-Video();
+
+
 
 
 
