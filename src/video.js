@@ -23,7 +23,7 @@ function onYouTubeIframeAPIReady() {
         host: 'http://www.youtube-nocookie.com',
         playerVars: {
             start: get.beginPlace,
-            controls: 1,
+            controls: 0,
             modestbranding: 1,
             listType: 'playlist',
             list: Channels[get.num].list[get.pageData[0]],
@@ -112,21 +112,13 @@ function onYouTubeIframeAPIReady() {
     };
 function stateChange() {
 
-        //checks if video has ended
-        if (player.getPlayerState() == 0) {
-            
-            get.pageData.push(player.getPlaylistIndex());
 
-            ///and save the array to local storage (each channel gets its own local storage slot)
-            localStorage.setItem(get.num, JSON.stringify(get.pageData));
-            Input.refresh();
-        }
         ///get.rndEpisodeNum keeps track of episode updates
         if (get.rndEpisodeNum< player.getPlaylistIndex()) {
 
             get.rndEpisodeNum = player.getPlaylistIndex();
-            //waits for 2secs before saving prev video to let player have time to switch states
-            let j = setTimeout(function () {
+            //waits for 500ms before saving prev video to let player have time to switch states
+            // let j = setTimeout(function () {
                 //add last episode to watched list array (pageData)
                 get.pageData.push(player.getPlaylistIndex() - 1);
 
@@ -145,8 +137,9 @@ function stateChange() {
                     run.nextPlaylist()
 
                 }
-                clearTimeout(j);
-            }, 500);
+                console.log('Prev episode saved to watched list')
+                //clearTimeout(j);
+            // }, 500);
         }
     }
 
