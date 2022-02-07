@@ -47,7 +47,7 @@ const run = {
         if (!localStorage.getItem(get.num)) { localStorage.setItem(get.num, JSON.stringify([0])); };
 
         get.pageData = JSON.parse(localStorage.getItem(get.num));
-
+        //checks if there are any videos left in the playlist and finds the next playist if at end
         if (get.pageData.length - 1 >= Channels[get.num].episodes) { run.nextPlaylist(); }
         //check each prev ch with the current generated ch
         for (let i = 1; i < get.pageData.length; i++) {

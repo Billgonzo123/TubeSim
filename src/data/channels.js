@@ -1,4 +1,4 @@
-//Created workaround for 200 video limit per playlist. Split playlist into sets and put them in an array
+//{channel, playlists array, number of episodes in playlist(max 200), true if we want to start at a random point in the video}
 
 const Channels =
     [

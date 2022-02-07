@@ -23,7 +23,7 @@ function onYouTubeIframeAPIReady() {
         host: 'http://www.youtube-nocookie.com',
         playerVars: {
             start: get.beginPlace,
-            controls: 0,
+            controls: 1,
             modestbranding: 1,
             listType: 'playlist',
             list: Channels[get.num].list[get.pageData[0]],
@@ -111,18 +111,10 @@ function onYouTubeIframeAPIReady() {
         }, 2000);
     };
 function stateChange() {
-        console.log(Channels[get.num].episodes);
-      
-        console.log("original Rnd Ch: ", get.rndEpisodeNum);
-        console.log("Last Ep: ", player.getPlaylistIndex() - 1, get.rndEpisodeNum);
-        console.log("New Ep: ", player.getPlaylistIndex());
 
-
-
-        //checks if current episode is the last in the playlist and sets flag if true
-        //  if (player.getPlaylistIndex() === channel[num].episodes){ lastInPlaylist = 1; console.log('This is the lastepisode in playlist');}
+        //checks if video has ended
         if (player.getPlayerState() == 0) {
-            console.log("Playlist ended");
+            
             get.pageData.push(player.getPlaylistIndex());
 
             ///and save the array to local storage (each channel gets its own local storage slot)
