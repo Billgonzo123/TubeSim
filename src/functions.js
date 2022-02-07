@@ -34,6 +34,10 @@ const run = {
             li.textContent = Channels[i].name;
             Element.listDisplay2().append(li);
         }
+        const menuShortcutEl = document.createElement("p");
+menuShortcutEl.id = "menuShortcut";
+menuShortcutEl.textContent = "Enter 00 for controls";
+Element.listDisplayDiv().append(menuShortcutEl);
     },
     checkRandomChannel() {
         //-----------CHECK IF RANDOM CHANNEL HAS BEEN GENERATED------------//
