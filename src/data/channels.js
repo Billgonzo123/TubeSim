@@ -1,4 +1,4 @@
-//{channel, playlists array, number of episodes in playlist(max 200), true if we want to start at a random point in the video}
+//{channel name, playlists array, number of episodes in playlist(max 200), true if we want to start at a random point in the video}
 
 const Channels =
     [
