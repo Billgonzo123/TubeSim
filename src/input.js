@@ -18,18 +18,18 @@ let Input = {
         F5  = refresh Page (default browser key)
         */
 
-        ///---Check if input is get.number or command key----///
+        ///---Check if input is number or command key----///
         if (isNaN(name)) {
             switch (name) {
                 case '+':
                 case 'PageUp':
-                    if (Element.listDisplayDiv().style.display == "block") { Input.overscan(name); } else {
+                    if (Element.listDisplayDiv().style.display == "block") { InputFunction.overscan(name); } else {
                         if (get.num >= Channels.length - 1) { get.num = 0; Input.refresh(); } else { get.num++; Input.refresh(); }
                     }
                     break;
                 case '-':
                 case 'PageDown':
-                    if (Element.listDisplayDiv().style.display == "block") { Input.overscan(name); } else {
+                    if (Element.listDisplayDiv().style.display == "block") { InputFunction.overscan(name); } else {
                         if (get.num <= 0) { get.num = Channels.length - 1; Input.refresh(); } else { get.num--; Input.refresh(); }
                     }
                     break;
@@ -41,16 +41,16 @@ let Input = {
                     Element.controlDisplay().style.display = "none";
                     break;
                 case '*':
-                    Input.volumeUp(name);
+                    InputFunction.volumeUp(name);
                     break;
                 case '/':
-                    Input.volumeDown(name);
+                    InputFunction.volumeDown(name);
                     break;
                 case "ArrowUp":
                 case "ArrowDown":
                 case "ArrowLeft":
                 case "ArrowRight":
-                    if (Element.listDisplayDiv().style.display == "block") { Input.overscan(name); }
+                    if (Element.listDisplayDiv().style.display == "block") { InputFunction.overscan(name); }
                     break;
                 case "End":
                     
@@ -60,7 +60,7 @@ let Input = {
                     Input.refresh();
                     break;
                 case "Home":
-                    Input.screenOff();
+                    InputFunction.screenOff();
                     break;
                 case "Insert":
                     Input.refresh();
@@ -68,7 +68,7 @@ let Input = {
             }
 
         }
-        ///----------enter numbers for channel input--------///
+        ///----------if input is a number, enter numbers for channel--------///
         else {
             //we must clear this value if a system message is displayed (like Memory Cleared or whatever)
             if (isNaN(Element.channelEntry().textContent)) { Element.channelEntry.textContent = '' };
@@ -87,7 +87,7 @@ let Input = {
 
                 if (nn >= Channels.length || nn < 0) {
 
-                    //if the chList is open, some get.number inputs can be used as special commands
+                    //if the chList is open, some number inputs can be used as special commands
                     if (Element.listDisplayDiv().style.display == "block") {
                         //nn is decremented before hand so the input will be one less (ie, 99=98 or 00=-1)
                         switch (nn) {
@@ -134,141 +134,11 @@ let Input = {
 
 
     },
-    //----------------------------Check for button inputs END-----------------------------//
-
-    //---------------------------------Fake Turn Off--------------------------------------//
-    screenOff() {
-        if (get.on) {
-            get.on = 0;
-            get.vol = 0;
-            document.getElementById("soundSrc").src = "./assets/sound/TVoff.ogg";
-            Element.sound().load();
-            Element.sound().play();
-
-            //do screen off animation
-            Element.static().style.animation = "powerOff .5s";
-            Element.vidWindow().style.animation = "powerOff .5s";
-            Element.chNameDisplay().style.display = 'none';
-            let offTimer = setInterval(function () {
-                Element.vidWindow().remove();
-                Element.static().remove();
-                clearInterval(offTimer);
-            }, 450);
-            //turn off
-        }
-        else {
-            get.vol = 50;
-            get.on = 1;
-            //turn back on
-            Input.refresh();
-        }
-    },
-    //---------------------------------OverscanSet-----------------------------------//
-    overscan(key) {
-
-        switch (key) {
-            case "+":
-                get.overscanSize += .01;
-                break;
-
-            case "-":
-                get.overscanSize -= .01;
-                break;
-            case "ArrowLeft":
-                get.horShift -= 1;
-                break;
-            case "ArrowRight":
-                get.horShift += 1;
-                break;
-            case "ArrowUp":
-                get.verShift -= 1;
-                break;
-            case "ArrowDown":
-                get.verShift += 1;
-                break;
-        }
-
-        Element.vidWindow().style.transform = "scale(" + get.overscanSize + ")";
-        Element.vidWindow().style.marginLeft = get.horShift + "px";
-        Element.vidWindow().style.marginTop = get.verShift + "px";
-        localStorage.setItem('overscan', get.overscanSize);
-        localStorage.setItem('horizontalShift', get.horShift);
-        localStorage.setItem('verticalShift', get.verShift);
-
-
-    },
-
-
-    //----------------------------Volume Functions START-----------------------------//
-    volumeUp() {
-        clearTimeout(Input.volTimeOut);
-        Element.volEl().style.display = 'block';
-        (get.vol >= 100) ? get.vol = 100 : get.vol += 5;
-        Element.volEl().textContent = "Volume [";
-        for (let i = 0; i < (get.vol); i += 5) {
-            switch (i) {
-                case 45: Element.volEl().textContent += "|";
-                    break;
-                default: Element.volEl().textContent += "-";
-                    break;
-            }
-        }
-        Element.volEl().textContent += "]";
-        Element.sound().volume = (get.vol / 100);
-        localStorage.setItem('playerVolume', get.vol);
-        hideVol();
-        return;
-    },
-
-    volumeDown() {
-        clearTimeout(Input.volTimeOut);
-        Element.volEl().style.display = 'block';
-        (get.vol <= 0) ? get.vol = 0 : get.vol -= 5;
-        Element.volEl().textContent = "Volume [";
-        for (let i = 0; i < (get.vol); i += 5) {
-            switch (i) {
-                case 45: Element.volEl().textContent += "|";
-                    break;
-                default: Element.volEl().textContent += "-";
-                    break;
-            }
-        }
-        Element.volEl().textContent += "]";
-
-        Element.sound().volume = (get.vol / 100);
-
-
-        localStorage.setItem('playerVolume', get.vol);
-
-        hideVol();
-        return;
-    },
-
-    //----------------------------Volume Functions END-----------------------------//
-
-    //----------------------------Initiate Functions-----------------------------//
-    //////simply refreshes the page sfter saving the current channel////////////////
+    
     refresh() {
         localStorage.setItem('lastChannel', get.num);
         location.reload();
     }
 };
 
-//set timeout as global variabe. Find a better way!
-let volTimeOut = setTimeout(function () {
-    Element.volEl().style.display = 'none';
-    clearTimeout(volTimeOut);
-    return;
-}, 1);
-
-//resets volume display timout
-function hideVol() {
-    clearTimeout(volTimeOut);
-    Element.volEl().style.display = 'block';
-    volTimeOut = setTimeout(function () {
-        Element.volEl().style.display = 'none';
-        clearTimeout(volTimeOut);
-        return;
-    }, 1500);
-}
 

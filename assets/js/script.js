@@ -1,5 +1,4 @@
 
-//initLocal storage must be run first as some modules depend on localstorage values
 run.initiateLocalStorage();
 //populated the channel list elements with the channel names by number
 run.populateChannelList();
@@ -9,16 +8,23 @@ run.initElementDisplays();
 
 //---------------main app init--------------//
 async function app() {
-
+    
     //set channel name to current channel
-    Element.chNameDisplay().textContent = Channels[get.num].name;
+    Element.chNameDisplay().textContent = Channels[get.num].name ;
+    const firstTime = JSON.parse(localStorage.getItem('firstTime'));
+
+    if (!firstTime) {
+        Element.chNameDisplay().textContent += ` -- Press "." for Menu -- `;
+    }
     //set static volume based on volume value
     Element.sound().volume = (get.vol / 100);
     //timer for chNameDisplay
     //Because a channel change is handled with a page refresh, this runs in the main code
     let chNameDisplayTimer = setInterval(
         function () {
-
+            //set firsTime to 1
+            localStorage.setItem('firstTime', 1);
+            Element.chNameDisplay().textContent = Channels[get.num].name;
             Element.chNameDisplay().style.display = "none";
             clearInterval(chNameDisplayTimer);
         }
@@ -43,10 +49,6 @@ async function app() {
     Video();
 
 }
-
-
-
-
 
 //event listener for keypress
 document.addEventListener('keydown', Input.keypress)

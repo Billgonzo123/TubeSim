@@ -13,6 +13,8 @@ const run = {
     initiateLocalStorage() {
         ///clast ch saved here
         if (!localStorage.getItem('lastChannel') || isNaN(localStorage.getItem('lastChannel'))) { localStorage.setItem('lastChannel', 0); };
+        //save if this is the first time program is used in browser
+        if (!localStorage.getItem('firstTime')) { localStorage.setItem('firstTime', 0); };
         ///volume and other data saved here
         if (!localStorage.getItem('playerVolume')) { localStorage.setItem('playerVolume', 50); };
 
