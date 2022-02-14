@@ -40,8 +40,8 @@ let Input = {
                         localStorage.setItem('firstTime', 1);
                         Element.chNameDisplay().style.display = "block"; Element.listDisplayDiv().style.display = 'block'; 
                     }
-                    else { E
-                        lement.chNameDisplay().style.display = "none"; Element.channelEntry().style.display = "none"; Element.listDisplayDiv().style.display = 'none'; 
+                    else { 
+                        Element.chNameDisplay().style.display = "none"; Element.channelEntry().style.display = "none"; Element.listDisplayDiv().style.display = 'none'; 
                     }
                     Element.controlDisplay().style.display = "none";
                     break;
