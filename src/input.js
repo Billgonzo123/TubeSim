@@ -65,6 +65,8 @@ let Input = {
                     Input.refresh();
                     break;
                 case "Home":
+                    run.initElementDisplays();
+                    Element.chNameDisplay().style.display = "none";
                     InputFunction.screenOff();
                     break;
                 case "Insert":
@@ -98,13 +100,15 @@ let Input = {
                         switch (nn) {
                             case 98:
                                 localStorage.removeItem(get.num);
-                                Element.channelEntry().textContent = 'Channel Memory Cleared';
+                                Element.channelEntry().textContent = 'Ch Mem Clear';
                                 get.n = 0;
+                                
                                 break;
                             case 97:
                                 localStorage.clear();
-                                Element.channelEntry().textContent = 'All Memory Cleared';
+                                Element.channelEntry().textContent = 'All Mem Clear';
                                 get.n = 0;
+                                
                                 break;
                             case -1:
                                 Element.controlDisplay().style.display = "block";
