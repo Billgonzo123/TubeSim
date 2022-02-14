@@ -3,12 +3,12 @@
 
 Ever wish you could go back in time to the "good-old-days" of tube TV's, predetermined television programming and unskippable commercials? CRT Flash Back Machine is designed to fill this empty void and hit you with a healthy dose of nostalgia! View hundreds of vintage content from the past century on your favorite old CRT television! Sit back and let the good times roll!
 
-## Instructions
-
 This program is specifically designed for the use of a standard definition tube TV set.  It is recommened to run this program on a device such as the Raspberry Pi, but the minimum requirements are:
 
 - Device capable of streaming videos in a web browser.
 - Modern web browser with HTML5 support
+
+![](screenshot.png)
 
 ## Installation
 This code is designed to be run locally without the need for a server. Simply clone or download the repository and open ```index.html``` in your prefered browser to get started. 
