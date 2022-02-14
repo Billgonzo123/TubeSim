@@ -23,7 +23,7 @@ async function app() {
     let chNameDisplayTimer = setInterval(
         function () {
             //set firsTime to 1
-            localStorage.setItem('firstTime', 1);
+            
             Element.chNameDisplay().textContent = Channels[get.num].name;
             Element.chNameDisplay().style.display = "none";
             clearInterval(chNameDisplayTimer);
