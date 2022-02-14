@@ -26,7 +26,7 @@ The channel names and associated youtube playlists can be customized by editing 
 - Skip episodes and/or remove it from random selection
 - Overscan and horizintal/vertical shift control
 
-## Future Feature
+## Future Features
 
 - Add setting to allow channels to remember thier state after changing channels
 - Add system menu UI for system settings
