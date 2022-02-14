@@ -93,10 +93,8 @@ function videoStart(event) {
 
     let k = setTimeout(function () {
         get.rndEpisodeNum = player.getPlaylistIndex();
-        // event.target.setShuffle({ 'shufflePlaylist': true });
 
-        /*This calculates the video length and finds how many times the value is divisible by 10 mins (600s)*/
-        //legnth is seconds
+      
         let vidLength = Math.floor((player.getDuration()));
         //HOW MANY 15 MIN SLOTS EXISTS
         let multi = Math.floor((vidLength / 600));
@@ -104,10 +102,13 @@ function videoStart(event) {
         let rnd = Math.floor(Math.random() * (multi));
         /*Then we check if the selected channel wants to be set to a random point with randPoint = true
         and finds a random spot in the video in increments of 10mins (600s)*/
-        if (Channels[get.num].randPoint) { get.beginPlace = rnd * 600; }
-        /*Then we apply that value to the vidoe player via "seekTo()".
+        if (Channels[get.num].randPoint) { 
+            get.beginPlace = rnd * 600; 
+            /*Then we apply that value to the vidoe player via "seekTo()".
          beginPlace default value is 0  so if randPoint isnt set it just starts at the beginning of the video*/
-        player.seekTo(get.beginPlace, true);
+            player.seekTo(get.beginPlace, true);
+        }
+        
         clearTimeout(k);
 
     }, 2000);
