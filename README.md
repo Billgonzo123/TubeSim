@@ -15,7 +15,7 @@ This code is designed to be run locally without the need for a server. Simply cl
 
 There is a live link provided at the bottom of this README if you do not wish to download locally. For the best expiriance you MUST configure your browser to allow autoPlay. Due to the nature of this program, there is no user input to initiate the video player. The ultimate expiriance is had with a dedicated device that automatically boots into a web browser with this program as its home page running on a CRT TV.  
 
-The channel names and associated youtube playlists can be customized by editing the ```channels.js``` file found in the ```src/data``` directory. The Youtube limits embeded playlists to a maximum 200 videos. Each channel can contain an array of playlists to circumvent this limitation. The program will randomly select all videos in a single playlist before moving on the next sequential playlist.
+The channel names and associated youtube playlists can be customized by editing the ```channels.js``` file found in the ```src/data``` directory. Youtube limits embeded playlists to a maximum 200 videos. Each channel can contain an array of playlists to circumvent this limitation. The program will randomly select all videos in a single playlist before moving on the next sequential playlist.
 
 ## features
 
