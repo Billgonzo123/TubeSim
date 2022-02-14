@@ -91,7 +91,7 @@ function videoStart(event) {
 
 
 
-    let k = setTimeout(function () {
+   
         get.rndEpisodeNum = player.getPlaylistIndex();
 
       
@@ -104,14 +104,11 @@ function videoStart(event) {
         and finds a random spot in the video in increments of 10mins (600s)*/
         if (Channels[get.num].randPoint) { 
             get.beginPlace = rnd * 600; 
-            /*Then we apply that value to the vidoe player via "seekTo()".
-         beginPlace default value is 0  so if randPoint isnt set it just starts at the beginning of the video*/
+            /*Then we apply that value to the vidoe player via "seekTo()"*/
             player.seekTo(get.beginPlace, true);
         }
         
-        clearTimeout(k);
 
-    }, 2000);
 };
 function stateChange() {
     //focus on window so that keyboard input is responsive
