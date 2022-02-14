@@ -17,7 +17,7 @@ There is a live link provided at the bottom of this README if you do not wish to
 
 The channel names and associated youtube playlists can be customized by editing the ```channels.js``` file found in the ```src/data``` directory. Youtube limits embeded playlists to a maximum 200 videos. Each channel can contain an array of playlists to circumvent this limitation. The program will randomly select all videos in a single playlist before moving on the next sequential playlist.
 
-## features
+## Features
 
 - Plays random videos from slected channel
 - Saves epsiodes that the user has watched so they do not repeat
@@ -25,6 +25,11 @@ The channel names and associated youtube playlists can be customized by editing 
 - Refreshing the page generates a new episode
 - Skip episodes and/or remove it from random selection
 - Overscan and horizintal/vertical shift control
+
+## Future Feature
+
+- Add setting to allow channels to remember thier state after changing the channels
+- Add system menu UI for system settings
 
 ## Controls
 | Key  |Action   |
