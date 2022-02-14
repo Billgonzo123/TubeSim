@@ -28,7 +28,7 @@ The channel names and associated youtube playlists can be customized by editing 
 
 ## Future Feature
 
-- Add setting to allow channels to remember thier state after changing the channels
+- Add setting to allow channels to remember thier state after changing channels
 - Add system menu UI for system settings
 
 ## Controls
