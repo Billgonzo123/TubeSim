@@ -35,12 +35,5 @@ const Channels =
         { name: "Ch: 28 - NFL 80s", list: ['PLAr_WbjGaCm5laqRScaYFlNiDSrLLW4rn'], episodes: 200, randPoint: 0 },
         { name: "Ch: 29 - Vintage TV", list: ['PLVPqan6x_34F-M2lCiaTzRSX6jxyQbXcL'], episodes: 200, randPoint: 0 },
 
-
-
-
-
-
-
-
     ];
 

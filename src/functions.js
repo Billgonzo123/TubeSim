@@ -7,6 +7,10 @@ const run = {
         Element.channelEntry().style.display = 'none';
         Element.controlDisplay().style.display = "none";
         Element.listDisplayDiv().style.display = "none";
+        if (!get.crt){
+        Element.mask().style.display = 'none';
+        Element.scanlines().style.display = 'none';
+        }
         //Make sure the channel name is dissplayed
         Element.chNameDisplay().style.display = "block";
     },
@@ -21,6 +25,7 @@ const run = {
         if (!localStorage.getItem('overscan')) { localStorage.setItem('overscan', 1); };
         if (!localStorage.getItem('horizontalShift')) { localStorage.setItem('horizontalShift', 0); };
         if (!localStorage.getItem('verticalShift')) { localStorage.setItem('verticalShift', 0); };
+        if (!localStorage.getItem('crtFilter')) { localStorage.setItem('crtFilter', 0); };
     },
     populateChannelList() {
         for (let i = 0; i < 15; i++) {
@@ -63,7 +68,7 @@ const run = {
         return;
     },
     nextPlaylist() {
-        //this runs if there are no more randum numbers to choose from
+        //this runs if there are no more random numbers to choose from
         //selects the next playlist if there is one. if not, it goes to playlist 0
         let currList = get.pageData[0];
         if (currList >= Channels[get.num].list.length - 1) {

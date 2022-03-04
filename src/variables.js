@@ -11,6 +11,7 @@ let get = {
     horShift: parseFloat(localStorage.getItem('horizontalShift')),
     verShift: parseFloat(localStorage.getItem('verticalShift')),
     vol: parseInt(localStorage.getItem('playerVolume')),
+    crt: parseInt(localStorage.getItem('crtFilter')),
      rndEpisodeNum: 0,
      //the saved channel number
      num: localStorage.getItem('lastChannel')

@@ -10,7 +10,9 @@ const Element = {
      channelEntry() {return document.getElementById('chEntry')},
      volEl() {return document.getElementById('volume')},
      chNameDisplay() {return document.getElementById('channelNameDisplay')},
-     vidWindow() {return document.querySelector('#player')}
+     vidWindow() {return document.querySelector('#player')},
+     mask() {return document.querySelector('.mask')},
+     scanlines() {return document.querySelector('.scanlines')},
     
 }
 

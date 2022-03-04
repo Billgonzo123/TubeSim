@@ -36,12 +36,12 @@ let Input = {
                 case '.':
                 case ',':
                 case 'Backspace':
-                    if (Element.listDisplayDiv().style.display === "none") { 
+                    if (Element.listDisplayDiv().style.display === "none") {
                         localStorage.setItem('firstTime', 1);
-                        Element.chNameDisplay().style.display = "block"; Element.listDisplayDiv().style.display = 'block'; 
+                        Element.chNameDisplay().style.display = "block"; Element.listDisplayDiv().style.display = 'block';
                     }
-                    else { 
-                        Element.chNameDisplay().style.display = "none"; Element.channelEntry().style.display = "none"; Element.listDisplayDiv().style.display = 'none'; 
+                    else {
+                        Element.chNameDisplay().style.display = "none"; Element.channelEntry().style.display = "none"; Element.listDisplayDiv().style.display = 'none';
                     }
                     Element.controlDisplay().style.display = "none";
                     break;
@@ -58,7 +58,7 @@ let Input = {
                     if (Element.listDisplayDiv().style.display == "block") { InputFunction.overscan(name); }
                     break;
                 case "End":
-                    
+
                     get.pageData.push(get.rndEpisodeNum);
                     ///and save the array to local storage (each channel gets its own local storage slot)
                     localStorage.setItem(get.num, JSON.stringify(get.pageData));
@@ -71,6 +71,24 @@ let Input = {
                     break;
                 case "Insert":
                     Input.refresh();
+                    break;
+                case 'Delete':
+                    //toggle crt filter
+                    if (Element.listDisplayDiv().style.display == "block") {
+                        if (parseInt(localStorage.getItem('crtFilter'))) {
+                            Element.vidWindow().classList.remove('crt');
+                            Element.mask().style.display = 'none'
+                            Element.scanlines().style.display = 'none'
+                            localStorage.setItem('crtFilter', 0)
+                            
+                        } else {
+                            Element.vidWindow().classList.add('crt');
+                            Element.mask().style.display = 'block'
+                            Element.scanlines().style.display = 'block'
+                            localStorage.setItem('crtFilter', 1)
+                           
+                        }
+                    }
                     break;
             }
 
@@ -102,13 +120,13 @@ let Input = {
                                 localStorage.removeItem(get.num);
                                 Element.channelEntry().textContent = 'Ch Mem Clear';
                                 get.n = 0;
-                                
+
                                 break;
                             case 97:
                                 localStorage.clear();
                                 Element.channelEntry().textContent = 'All Mem Clear';
                                 get.n = 0;
-                                
+
                                 break;
                             case -1:
                                 Element.controlDisplay().style.display = "block";
@@ -143,7 +161,7 @@ let Input = {
 
 
     },
-    
+
     refresh() {
         localStorage.setItem('lastChannel', get.num);
         location.reload();
