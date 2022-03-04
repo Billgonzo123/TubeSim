@@ -9,20 +9,20 @@
     <title>CRT Flash Back Machine 2.0</title>
 
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    
-    <script type="text/javascript"  src="./src/functions.js"></script>
-    
-<!--initLocalStroage  must be run as these values are needed for the next scripts-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <script type="text/javascript" src="./src/functions.js"></script>
+
+    <!--initLocalStroage  must be run as these values are needed for the next scripts-->
     <script>run.initiateLocalStorage();</script>
 
-    <script type="text/javascript"  src="./src/data/channels.js"></script>
-    <script type="text/javascript"  src="./src/elements.js"></script>
-    <script type="text/javascript"  src="./src/variables.js"></script>
+    <script type="text/javascript" src="./src/data/channels.js"></script>
+    <script type="text/javascript" src="./src/elements.js"></script>
+    <script type="text/javascript" src="./src/variables.js"></script>
 
-    <script type="text/javascript"  src="./src/input.js"></script>
-    <script type="text/javascript"  src="./src/inputFunctions.js"></script>
-    <script type="text/javascript"  src="./src/video.js"></script>
+    <script type="text/javascript" src="./src/input.js"></script>
+    <script type="text/javascript" src="./src/inputFunctions.js"></script>
+    <script type="text/javascript" src="./src/video.js"></script>
 
 
 
@@ -37,43 +37,42 @@
     </audio>
     <img id="staticImage" src="./assets/images/static.gif" alt="tv Static" width="720" height="480" />
     <h2 id="channelNameDisplay">Error - Check console log</h2>
-   
+
     <div id="chListDisp">
         <ol id="chList"> </ol>
         <ol id="chList2"> </ol>
-        <p id = "controlsScreen">
-|      Key     |       Action       |
-| ------------ | ------------------ |
-|  + PgUp      |   Channel Up       |
-|  - PgDwn     |  Channel Down      |
-| Number 0-9   |  Enter a channel   |
-|      *       |       Vol+         |
-|      /       |       Vol-         |
-|     . ,      |    Channel List    |
-|   F5/Insert  |    Reload Page     |
-|     Home     |  Pseudo power down |
-|     End      |Skip episode forever|
-|-----------------------------------|
-|    While channels list is open    |
-|-----------------------------------|
-| Input 99 |  Clear Current Ch Mem  |
-| Input 98 |  Clear all Ch Memory   |  
-|  CH+/Ch- |    Adjust Overscan     |
-|Arrow Keys|    Hor/Vert Shift      |
-|    Del   |      CRT Filter        |
+        <p id="controlsScreen">
+            | Key | Action |
+            | ------------ | ------------------ |
+            | + PgUp | Channel Up |
+            | - PgDwn | Channel Down |
+            | Number 0-9 | Enter a channel |
+            | * | Vol+ |
+            | / | Vol- |
+            | . , | Channel List |
+            | F5/Insert | Reload Page |
+            | Home | Pseudo power down |
+            | End |Skip episode forever|
+            |-----------------------------------|
+            | While channels list is open |
+            |-----------------------------------|
+            | Input 99 | Clear Current Ch Mem |
+            | Input 98 | Clear all Ch Memory |
+            | CH+/Ch- | Adjust Overscan |
+            |Arrow Keys| Hor/Vert Shift |
+            | Del | CRT Filter |
         </p>
     </div>
     <h2 id="chEntry"></h2>
     <h2 id="volume">Volume []</h2>
-    <div class="mask"></div>
-    <div class="scanlines"></div>
-    <div id="player" class="crt">
-
-
+    <div class="screenElements">
+        <div class="mask"></div>
+        <div class="scanlines"></div>
+        <div id="player"></div>
     </div>
-    
-    
-    
+
+
+
 
     <!--<script type='module' src="./src/index.js"></script>-->
     <script src="./assets/js/script.js"></script>
