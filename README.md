@@ -52,6 +52,7 @@ The channel names and associated youtube playlists can be customized by editing 
 |Input 98| Clears all Channel Memory|  
 |CH+/Ch-| Increase/Decrease Overscan|
 |Direction Keys| Horizontal/Vertical Shift|
+|Delete| Toggle CRT filter|
 
 
 
