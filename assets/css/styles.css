@@ -137,14 +137,7 @@ white-space: pre;
 /* ---CRT Scanline effect */
 
 
-.scanlines {
-    z-index: 9990;
-    filter: brightness(2) saturate(300%);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    opacity: .5;
-}
+
 
 .red {
     
@@ -197,6 +190,14 @@ white-space: pre;
     filter: brightness(1.1) saturate(250%) ;
 }
 
+.scanlines {
+    z-index: 9990;
+    filter: brightness(2) saturate(300%);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+}
 
 
 

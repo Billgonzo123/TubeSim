@@ -7,10 +7,8 @@ const run = {
         Element.channelEntry().style.display = 'none';
         Element.controlDisplay().style.display = "none";
         Element.listDisplayDiv().style.display = "none";
-        if (!get.crt){
-        Element.mask().style.display = 'none';
-        Element.scanlines().style.display = 'none';
-        }
+        if (!get.crt) Element.screenElements().style.display = 'none';
+        
         //Make sure the channel name is dissplayed
         Element.chNameDisplay().style.display = "block";
     },

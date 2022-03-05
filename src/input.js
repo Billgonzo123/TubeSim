@@ -77,14 +77,12 @@ let Input = {
                     if (Element.listDisplayDiv().style.display == "block") {
                         if (parseInt(localStorage.getItem('crtFilter'))) {
                             Element.vidWindow().classList.remove('crt');
-                            Element.mask().style.display = 'none'
-                            Element.scanlines().style.display = 'none'
+                            Element.screenElements().style.display = 'none'
                             localStorage.setItem('crtFilter', 0)
                             
                         } else {
                             Element.vidWindow().classList.add('crt');
-                            Element.mask().style.display = 'block'
-                            Element.scanlines().style.display = 'block'
+                            Element.screenElements().style.display = 'block'
                             localStorage.setItem('crtFilter', 1)
                            
                         }

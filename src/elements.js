@@ -13,6 +13,7 @@ const Element = {
      vidWindow() {return document.querySelector('#player')},
      mask() {return document.querySelector('.mask')},
      scanlines() {return document.querySelector('.scanlines')},
+     screenElements() {return document.querySelector('.screenElements')},
     
 }
 
