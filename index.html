@@ -35,49 +35,51 @@
 
 
     </audio>
-    <img id="staticImage" src="./assets/images/static.gif" alt="tv Static"  />
+    <img id="staticImage" src="./assets/imag/static.gif" alt="tv Static"  />
     <h2 id="channelNameDisplay">Error - Check console log</h2>
 
     <div id="chListDisp">
         <ol id="chList"> </ol>
         <ol id="chList2"> </ol>
         <p id="controlsScreen">
-            | Key | Action |
-            | ------------ | ------------------ |
-            | + PgUp | Channel Up |
-            | - PgDwn | Channel Down |
-            | Number 0-9 | Enter a channel |
-            | * | Vol+ |
-            | / | Vol- |
-            | . , | Channel List |
-            | F5/Insert | Reload Page |
-            | Home | Pseudo power down |
-            | End |Skip episode forever|
-            |-----------------------------------|
-            | While channels list is open |
-            |-----------------------------------|
-            | Input 99 | Clear Current Ch Mem |
-            | Input 98 | Clear all Ch Memory |
-            | CH+/Ch- | Adjust Overscan |
-            |Arrow Keys| Hor/Vert Shift |
-            | Del | CRT Filter |
+| Key | Action |
+| ------------ | ------------------ |
+| + PgUp | Channel Up |
+| - PgDwn | Channel Down |
+| Number 0-9 | Enter a channel |
+| * | Vol+ |
+| / | Vol- |
+| . , | Channel List |
+| F5/Insert | Reload Page |
+| Home | Pseudo power down |
+| End |Skip episode forever|
+|-----------------------------------|
+| While channels list is open |
+|-----------------------------------|
+| Input 99 | Clear Current Ch Mem |
+| Input 98 | Clear all Ch Memory |
+| CH+/Ch- | Adjust Overscan |
+|Arrow Keys| Hor/Vert Shift |
+| Del | CRT Filter |
         </p>
     </div>
     <h2 id="chEntry"></h2>
     <h2 id="volume">Volume []</h2>
     <div class="screenElements">
-        
-        <div class="mask"></div>
-        
-        <div class="scanlines red"></div>
-        <!-- <div class="scanlines redSub"></div> -->
-        <div class="scanlines green"></div>
-        <!-- <div class="scanlines greenSub"></div> -->
-        <div class="scanlines blue"></div>
-        <!-- <div class="scanlines blueSub"></div> -->
+            <div class="scanlines RY"> </div>
+            <div class="scanlines RM"> </div>
+            <div class="scanlines R-bloom bloom"> </div>
+    
+            <div class="scanlines GC"> </div>
+            <div class="scanlines GY"> </div>
+            <div class="scanlines G-bloom bloom"> </div>
+    
+            <div class="scanlines BM"> </div>
+            <div class="scanlines BC"> </div>
+            <div class="scanlines B-bloom bloom"> </div>
+            
+            <div class="mask"></div>
   
-        
-        
     </div>
 
     <div id="player" class="crt"></div>

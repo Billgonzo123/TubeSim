@@ -138,62 +138,83 @@ white-space: pre;
 
 
 .scanlines {
-    z-index: 9990;
-    position:absolute;
-    width: 100vw;
-    height: 100vh;
+    z-index: 3;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+/* Red phosphor made of magenta and yellow */
+.RY {
+  z-index: 2;
+  background: url(../img/RY.png);
+  mix-blend-mode: darken;
+}
+.RM {
+  background: url(../img/RM.png);
+  mix-blend-mode: multiply;
+}
+.R-bloom {
+  z-index: 4;
+  background: url(../img/R.png);
+  mix-blend-mode: darken;
+   filter: blur(1px) saturate(.6);
+}
+
+/* Green phosphor made of yellow and cyan */
+.GC {
+  background: url(../img/G.png);
+  mix-blend-mode:darken;
+}
+.GY {
+  background: url(../img/G.png);
+  mix-blend-mode: multiply;
+}
+.G-bloom {
+  z-index: 4;
+  background: url(../img/G.png);
+  mix-blend-mode: darken;
+   filter: blur(1px) saturate(10);
+}
+
+/* Blue phosphor made of cyan and magenta */
+.BM {
+  z-index: 2;
+  background: url(../img/BM.png);
+  mix-blend-mode:darken;
+}
+.BC {
+  z-index: 3;
+  background: url(../img/BC.png);
+  mix-blend-mode: multiply;
+}
+.B-bloom {
+  z-index: 4;
+  background: url(../img/B.png);
+  mix-blend-mode: darken;
+   filter: blur(1px) saturate(10) ;
+}
+
+.bloom {
     opacity: .5;
-}
-
-.red {
     
-    background: url(../../R.png);
-    mix-blend-mode:color-dodge ; 
-}
-.redSub {
-    opacity: .1;
-    background: url(../../R.png);
-    mix-blend-mode:color-dodge ; 
-    filter: brightness(1.5);
-}
-
-.green {
-    background: url(../../G.png);
-    mix-blend-mode:color-dodge;
-}
-.greenSub {
-    opacity: .1;
-    background: url(../../G.png);
-    mix-blend-mode:color-dodge;
-    filter: brightness(1.5);
-}
-.blue {
-    
-    background: url(../../B.png);
-    mix-blend-mode:color-dodge; 
-    
-}
-.blueSub {
-    
-    opacity: .1;
-    background: url(../../B.png);
-    mix-blend-mode:color-dodge; 
-    filter: brightness(1.5);
 }
 
 .mask {
-
-    z-index: 9990;
-    opacity: .8;
+    z-index: 1;
+    opacity: .4;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-  background: url(../../mask.png);
-  
-}
+    width: 100%;
+    height: 100%;
+  background: url(../img/mask.png);
 
+ /* mix-blend-mode:exclusion;  */
+
+}
 .crt {
-    filter: brightness(1.1) saturate(150%) ;
+    filter: brightness(1.1) saturate(140%);
 }
 
 
