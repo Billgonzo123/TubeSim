@@ -158,6 +158,11 @@ white-space: pre;
   background: url(../img/RM.png);
   mix-blend-mode: multiply;
 }
+.R-bloom {
+  z-index: 4;
+  background: url(.../img/R.png);
+  mix-blend-mode: darken;
+}
 
 
 /* Green phosphor made of yellow and cyan */
@@ -168,6 +173,13 @@ white-space: pre;
 .GY {
   background: url(../img/GY.png);
   mix-blend-mode: multiply;
+}
+.G-bloom {
+
+  z-index: 4;
+  background: url(.../img/G.png);
+  mix-blend-mode: darken;
+   filter: blur(1px) saturate(10);
 }
 
 
@@ -181,6 +193,18 @@ white-space: pre;
   z-index: 3;
   background: url(../img/BC.png);
   mix-blend-mode: multiply;
+}
+.B-bloom {
+ 
+  z-index: 4;
+  background: url(../img/B.png);
+  mix-blend-mode: darken;
+   filter: blur(1px) saturate(10);
+   
+}
+
+.bloom {
+  opacity: 0;
 }
 
 .mask {
