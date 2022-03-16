@@ -139,7 +139,7 @@ white-space: pre;
 
 .scanlines {
     z-index: 3;
-    opacity: 1;
+    opacity: .8;
     position: absolute;
     top: 0;
     right: 0;
@@ -149,69 +149,34 @@ white-space: pre;
 }
 
 /* Red phosphor made of magenta and yellow */
-.RY {
-  z-index: 2;
-  background: url(../img/RY.png);
-  mix-blend-mode: darken;
-}
-.RM {
-  background: url(../img/RM.png);
-  mix-blend-mode: multiply;
-}
 .R-bloom {
   z-index: 4;
-  background: url(.../img/R.png);
+  background: url(../img/R.png);
   mix-blend-mode: darken;
 }
 
 
 /* Green phosphor made of yellow and cyan */
-.GC {
-  background: url(../img/GC.png);
-  mix-blend-mode:darken;
-}
-.GY {
-  background: url(../img/GY.png);
-  mix-blend-mode: multiply;
-}
 .G-bloom {
-
   z-index: 4;
-  background: url(.../img/G.png);
+  background: url(../img/G.png);
   mix-blend-mode: darken;
-   filter: blur(1px) saturate(10);
+
 }
 
 
 /* Blue phosphor made of cyan and magenta */
-.BM {
-  z-index: 2;
-  background: url(../img/BM.png);
-  mix-blend-mode:darken;
-}
-.BC {
-  z-index: 3;
-  background: url(../img/BC.png);
-  mix-blend-mode: multiply;
-}
 .B-bloom {
- 
   z-index: 4;
   background: url(../img/B.png);
   mix-blend-mode: darken;
-   filter: blur(1px) saturate(10);
-   
-}
-
-.bloom {
-  opacity: 0;
 }
 
 .mask {
     top: 0;
     right: 0;
     z-index: 1;
-    opacity: .7;
+    opacity: .6;
     position: absolute;
     width: 110%;
     height: 110%;
@@ -222,6 +187,10 @@ white-space: pre;
 }
 .crt {
     filter: brightness(1.1) saturate(140%);
+}
+
+.scanlines, .mask{
+  background-size: 12px 12px;
 }
 
 
