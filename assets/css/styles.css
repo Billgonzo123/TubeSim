@@ -146,9 +146,9 @@ white-space: pre;
     width: 110%;
     height: 110%;
     background-attachment: fixed;
+
 }
 
-/* Red phosphor made of magenta and yellow */
 .R-bloom {
   z-index: 4;
   background: url(../img/R.png);
@@ -156,7 +156,6 @@ white-space: pre;
 }
 
 
-/* Green phosphor made of yellow and cyan */
 .G-bloom {
   z-index: 4;
   background: url(../img/G.png);
@@ -165,7 +164,6 @@ white-space: pre;
 }
 
 
-/* Blue phosphor made of cyan and magenta */
 .B-bloom {
   z-index: 4;
   background: url(../img/B.png);
@@ -173,6 +171,7 @@ white-space: pre;
 }
 
 .mask {
+   
     top: 0;
     right: 0;
     z-index: 1;
