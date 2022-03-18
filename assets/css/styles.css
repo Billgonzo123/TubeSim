@@ -138,6 +138,7 @@ white-space: pre;
 
 
 .scanlines {
+    pointer-events: none;
     z-index: 3;
     opacity: .8;
     position: absolute;
