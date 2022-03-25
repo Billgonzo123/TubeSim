@@ -1,4 +1,4 @@
-# CRT Flash Back Machine
+# TubeSim
 ## Description:  
 
 Ever wish you could go back in time to the "good-old-days" of tube TV's, predetermined television programming and unskippable commercials? CRT Flash Back Machine is designed to fill this empty void and hit you with a healthy dose of nostalgia! View hundreds of vintage content from the past century on your favorite old CRT television! Sit back and let the good times roll!
