@@ -33,10 +33,12 @@ const InputFunction =
 
         switch (key) {
             case "+":
+            case "PageUp":
                 get.overscanSize += .01;
                 break;
 
             case "-":
+            case "PageDown":
                 get.overscanSize -= .01;
                 break;
             case "ArrowLeft":
