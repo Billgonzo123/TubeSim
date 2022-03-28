@@ -15,7 +15,7 @@ const Channels =
         { name: 'Ch: 11 - Recess', list: ['PL3panSrIeiNJZN_qyGZvhvtI4R-xKsEW8'], episodes: 135, randPoint: 0 },
         { name: 'Ch: 12 - Pepper Ann', list: ['PLLhOnau-tupR82ubLjcY2tQNlUMGTn__z'], episodes: 160, randPoint: 0 },
         { name: "Ch: 13 - 80's TV", list: ['PLGS5pi29Z6qFmRfb4q9RPURwKK0xMk6IT'], episodes: 200, randPoint: 0 },
-        { name: "Ch: 14 - 90's TV", list: ['PLo6LMGdjaTzLxpgNhSiCjzwMPXRLJjwaJ'], episodes: 200, randPoint: 0 },
+        { name: "Ch: 14 - Computerphile", list: ['PLo6LMGdjaTzLKMVX0XpRnBC5lsB0tdW1L'], episodes: 199, randPoint: 0 },
         {
             name: 'Ch: 15 - Computer Chronicles', list: ['PLmM8tWTshxQBws_fIdi5qH63rZxrlB0qL', 'PLo6LMGdjaTzJ-1c0eMes7t3kqDaJARw0S',
                 'PLo6LMGdjaTzKTYLTLmaF3rhlQpPaqC6jd'], episodes: 200, randPoint: 0
