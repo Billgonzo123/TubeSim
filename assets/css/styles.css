@@ -95,8 +95,8 @@ html{
     left:190px;
     z-index: 999999;
    }
-   #controlsScreen{
-white-space: pre;
+#controlsScreen{
+ white-space: pre;
  color:rgba(0, 182, 0,.9);
  background-color: rgb(37, 36, 36);
  padding: 3px 5px 3px 5px;
@@ -104,7 +104,7 @@ white-space: pre;
  font-size: 18px;
  position: fixed;
  top:20px;
- left:255px;
+ left:120px;
 
  z-index: 9999999;
 }
