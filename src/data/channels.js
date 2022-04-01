@@ -13,7 +13,7 @@ const Channels =
         { name: 'Ch: 9 - Saturday Morning', list: ['PLo6LMGdjaTzIaer3XW-Hw9zalxpnFBPS7'], episodes: 17, randPoint: 1 },
         { name: 'Ch: 10 - Kablam', list: ['PLUiXHUbyt3otcSGKiOCzZn4pFalAt3sFS'], episodes: 48, randPoint: 0 },
         { name: 'Ch: 11 - Recess', list: ['PL3panSrIeiNJZN_qyGZvhvtI4R-xKsEW8'], episodes: 135, randPoint: 0 },
-        { name: 'Ch: 12 - Pepper Ann', list: ['PLLhOnau-tupR82ubLjcY2tQNlUMGTn__z'], episodes: 160, randPoint: 0 },
+        { name: 'Ch: 12 - Reading Rainbow', list: ['PLx17EcnKQ9UYoxPfxb9C_K4S9V26Z3xxj'], episodes: 151, randPoint: 0 },
         { name: "Ch: 13 - 80's TV", list: ['PLGS5pi29Z6qFmRfb4q9RPURwKK0xMk6IT'], episodes: 200, randPoint: 0 },
         { name: "Ch: 14 - Computerphile", list: ['PLo6LMGdjaTzLKMVX0XpRnBC5lsB0tdW1L'], episodes: 199, randPoint: 0 },
         {
