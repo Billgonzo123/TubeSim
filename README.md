@@ -3,6 +3,8 @@
 
 Ever wish you could go back in time to the "good-old-days" of tube TV's, predetermined television programming and unskippable commercials? CRT Flash Back Machine is designed to fill this empty void and hit you with a healthy dose of nostalgia! View hundreds of vintage content from the past century on your favorite old CRT television! Sit back and let the good times roll!
 
+### Note: The UI for this app is designed for a resolution of 480p. Although the video window can be scaled to fit any screen resolution, the UI will not scale with it.
+
 This program is specifically designed for the use of a standard definition tube TV set.  It is recommened to run this program on a device such as the Raspberry Pi, but the minimum requirements are:
 
 - Device capable of streaming videos in a web browser.
