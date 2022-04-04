@@ -48,6 +48,8 @@ The channel names and associated youtube playlists can be customized by editing 
 |Home| Pseudo power down|
 |End| Skip episode forever|
 
+### Note: For the most authentic experience, use a [USB IR receiver](https://www.amazon.com/Universal-Remote-Control-Receiver-Raspberry/dp/B01NBRBWS6) and program a real remote with the above key mappings
+
 
 ## System Controls
 |While channels list is open| |
