@@ -10,7 +10,7 @@ This program is specifically designed for the use of a standard definition tube 
 - Modern web browser
 - For the best experience, a device such as the Raspberry Pi 4 should be overclocked and sufficiently cooled to minimize page loading
 
-### Note: The UI for this app is designed for a resolution of 480p. Although the video window can be scaled to fit any screen resolution, the UI will not scale with it.
+### Note: The UI for this app is designed for a resolution of 720x480. Although the video window can be scaled to fit any screen resolution, the UI will not scale with it.
 
 ![](screenshot.png)
 
